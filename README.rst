@@ -16,7 +16,7 @@ Showcase
 --------
 .. image:: https://github.com/useblocks/sphinx-preview/raw/main/docs/_static/sphinx-preview-showcase.gif
    :align: center
-   :width: 65%
+   :width: 100%
 
 
 
