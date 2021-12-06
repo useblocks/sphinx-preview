@@ -1,0 +1,22 @@
+a:after{
+}
+
+#preview {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 0;
+  display: none;
+  z-index: 1000;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  padding: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+#preframe {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+  border: none;
+}

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sphinx-preview"
+version = "0.1.0"
+description = ""
+authors = ["team useblocks"]
+license = "MIT"
+readme = "README.rst"
+repository = "https://github.com/useblocks/sphinx-preview"
+documentation = "https://sphinx-preview.readthedocs.io/en/latest/"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+sphinx = "^4"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.extras]
+docs = ["sphinx"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
