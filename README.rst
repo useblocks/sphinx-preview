@@ -1,6 +1,7 @@
 .. image:: https://github.com/useblocks/sphinx-preview/raw/main/docs/_static/sphinx-preview-logo.png
    :align: center
    :width: 50%
+   :target: https://sphinx-preview.readthedocs.io/en/latest/
    :alt: Sphinx-Preview
 
 
@@ -15,7 +16,7 @@ Showcase
 --------
 .. image:: https://github.com/useblocks/sphinx-preview/raw/main/docs/_static/sphinx-preview-showcase.gif
    :align: center
-   :width: 50%
+   :width: 65%
 
 
 
