@@ -6,11 +6,16 @@
 
 `Sphinx <https://www.sphinx-doc.org>`_ extension to show previews for links, if a mouse hovers is detected.
 
+Docs
+----
+
 See complete documentation under: https://sphinx-preview.readthedocs.io/en/latest/
 
-.. image:: https://github.com/useblocks/sphinx-preview/raw/main/docs/_static/sphinx-preview-showcase.png
+Showcase
+--------
+.. image:: https://github.com/useblocks/sphinx-preview/raw/main/docs/_static/sphinx-preview-showcase.gif
    :align: center
-   :width: 100%
+   :width: 50%
 
 
 
