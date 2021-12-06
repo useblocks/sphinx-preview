@@ -24,6 +24,13 @@ JavaScript.
 
 But there is a bunch of configuration options to control behavior and style.
 
+Showcase
+--------
+.. image:: /_static/sphinx-preview-showcase.gif
+   :align: center
+
+Test yourself here: :ref:`needs`.
+
 Configuration
 -------------
 ``Sphinx-Preview`` provides a single configuration option, called ``preview_config``.
