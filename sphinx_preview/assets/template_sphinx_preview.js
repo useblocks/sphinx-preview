@@ -1,6 +1,4 @@
 $(function() {
-  console.log("EXECUTED")
-
   var hovered = false;
   var config = {{ config }}
 

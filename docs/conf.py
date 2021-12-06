@@ -34,14 +34,14 @@ extensions = [
 
 preview_config = {
     "selector": "div.body a",
-    "not_selector": "div.needs_head a, h1 a, h2 a",
+    "not_selector": "div.needs_head a, h1 a, h2 a, h3 a, h4 a",
     # "selector": "div.body a.reference.internal",
     "set_icon": True,
     "icon_only": True,
     "width": 500,
     "height": 400,
     "offset": {
-        "left": 20,
+        "left": 30,
         "top": 20
     },
     "icon": "  👁",

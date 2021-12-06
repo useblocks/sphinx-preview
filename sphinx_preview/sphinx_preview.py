@@ -10,7 +10,6 @@ from sphinx_preview.version import VERSION
 
 def setup(app):
     app.add_config_value('preview_config', {}, 'html')
-
     app.connect("env-updated", install_lib_static_files)
 
     return {

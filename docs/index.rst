@@ -100,17 +100,40 @@ Default: ``True``
 
 icon
 ~~~~
-Defines the icon or better string to set.
+Defines the icon or better a string.
 
 Use Utf-8 icons to get some nice "images".
 
-Default: ``  👁``
+Default: ``👁``
 
 width
 ~~~~~
 Width of the preview window in `px`.
 
+Default: ``500``
+
 height
-~~~~~
+~~~~~~
 Height of the preview window in `px`.
+
+Default: ``300``
+
+offset
+~~~~~~
+Takes a dictionary with the keys ``left`` and ``top``.
+Both values define in ``px`` the location of the preview window, relative to the starting position of the link.
+
+Default::
+
+   {
+       'left': 20,
+       'top': 20
+   }
+
+
+timeout
+~~~~~~~
+A time in ``ms``, after which the preview window gets shown.
+
+Default: ``250``.
 
