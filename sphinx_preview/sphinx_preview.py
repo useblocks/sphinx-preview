@@ -33,7 +33,6 @@ def _save_js_file(app, target):
         "offset": config.get('offset', {'left': 20, 'top': 20}),
         "timeout": config.get('timeout', 250)
     }
-
     script_dir = os.path.join(os.path.dirname(__file__), 'assets')
     templateLoader = jinja2.FileSystemLoader(searchpath=script_dir)
     templateEnv = jinja2.Environment(loader=templateLoader)
@@ -43,8 +42,8 @@ def _save_js_file(app, target):
         outputText = template.render(config=json.dumps(final_config))
     except Exception as e:
         raise e
-
-    with open(target, 'w') as conf_file:
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    with open(target, 'w+') as conf_file:
         conf_file.write(outputText)
 
     return final_config
