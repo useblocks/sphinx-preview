@@ -41,8 +41,8 @@ preview_config = {
     "width": 500,
     "height": 400,
     "offset": {
-        "left": 30,
-        "top": 20
+        "left": 0,
+        "top": 0
     },
     "icon": "  👁",
     "timeout": 500,
