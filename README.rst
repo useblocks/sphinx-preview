@@ -5,12 +5,12 @@
    :alt: Sphinx-Preview
 
 
-`Sphinx <https://www.sphinx-doc.org>`_ extension to show previews for links, if a mouse hovers is detected.
+`Sphinx <https://www.sphinx-doc.org>`_ extension to show previews for links, if a mouse hover is detected.
 
 Docs
 ----
 
-See complete documentation under: https://sphinx-preview.readthedocs.io/en/latest/
+See complete documentation at https://sphinx-preview.readthedocs.io/en/latest/
 
 Showcase
 --------

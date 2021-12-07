@@ -24,6 +24,12 @@ JavaScript.
 
 But there is a bunch of configuration options to control behavior and style.
 
+.. warning::
+
+   This project is in beta-phase.
+   Support for Firefox seems to work well. Chromium based browsers  have some problems with some specific pages in
+   iframes (jumping page, no navigation to given anchor).
+
 Showcase
 --------
 .. image:: /_static/sphinx-preview-showcase.gif
