@@ -42,21 +42,17 @@ iframe handling
 The iframe preview gets opened by mouseover and/or by clicking the icon (if ``icon_click = True``).
 It gets closed, if the mouse leaves the link/icon. And it also gets closed, if the mouse leaves the iframe.
 
-So as long as the mouse stays on the link/icon or is on the iframe, the iframe window is open and you can
-navigate in it.
+So as long as the mouse stays on the link/icon, the iframe window is open.
 
-To get the mouse inside the iframe, without leaving the link/icon, the offset parameters should not be too far away
-from the link/mouse, so that the mouse pointer is automatically in the iframe, when is pops up.
-
-If ``icon_click = True`` is set, the mouse can leave the icon and the iframe stays open.
-Another click on the icon will close the iframe, or if the mouse leaves the iframe.
+If you want to navigate inside the iframe, you should use ``icon_click = True``.
+In this case  the mouse can leave the icon and the iframe stays open.
+Another click on the icon will close the iframe, or if the mouse leaves the iframe (after entering it once).
 
 iframe position is also not fix. If the iframe window will be outside the current browser screen, the position and
 maybe size are recalculated, so that it fits on the screen.
 
 Please take also into account, that mobile devices do not have a mouse. For them ``icon_click = True`` is the best
 configuration to let them open the preview window.
-
 
 Configuration
 -------------
