@@ -129,6 +129,19 @@ The link itself stays "normal" and will not open a preview window.
 
 Default: ``True``
 
+icon_click
+~~~~~~~~~~
+The icon behaves like a button:
+
+1. click, preview window gets opened
+2. click, preview window is closed.
+
+No more mouseover affects for the icon.
+
+Best solution, if preview window shall be used also on mobile devices.
+
+Default: ``False``
+
 icon
 ~~~~
 Defines the icon or better a string.
