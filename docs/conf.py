@@ -38,14 +38,15 @@ preview_config = {
     # "selector": "div.body a.reference.internal",
     "set_icon": True,
     "icon_only": True,
+    "icon_click": False,
     "width": 500,
     "height": 400,
     "offset": {
-        "left": 0,
-        "top": 0
+        "left": 30,
+        "top": 30
     },
     "icon": "  👁",
-    "timeout": 500,
+    "timeout": 100,
 }
 
 # Add any paths that contain templates here, relative to this directory.

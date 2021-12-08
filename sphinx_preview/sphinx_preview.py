@@ -28,6 +28,7 @@ def _save_js_file(app, target):
         "icon": config.get('icon', '  👁'),
         "set_icon": config.get('set_icon', True),
         "icon_only": config.get('icon_only', True),
+        "icon_click": config.get('icon_click', True),
         "width": config.get('width', 500),
         "height": config.get('height', 300),
         "offset": config.get('offset', {'left': 20, 'top': 20}),
