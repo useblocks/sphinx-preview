@@ -5,7 +5,7 @@ Needs Examples
 
 Requirements and Specifications for :ref:`sphinx_preview`.
 
-Using `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_.
+Using `Sphinx-Needs <https://sphinx-needs.readthedocs.io/en/latest/>`_.
 
 Requirements
 ------------

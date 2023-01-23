@@ -10,7 +10,7 @@ documentation = "https://sphinx-preview.readthedocs.io/en/latest/"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-sphinx = "^4"
+sphinx = "^5"
 
 [tool.poetry.dev-dependencies]
 
