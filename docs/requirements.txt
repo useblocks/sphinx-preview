@@ -1,2 +1,4 @@
 Sphinx
-sphinxcontrib-needs
+sphinx-needs
+sphinx-immaterial
+sphinx-copybutton

@@ -5,6 +5,11 @@
 
 .. _sphinx_preview:
 
+.. image:: _static/sphinx-preview-logo.svg
+   :align: center
+
+|
+
 Sphinx-Preview
 ==============
 ``Sphinx-Preview`` shows small previews for selectable links in HTML documents.
@@ -13,11 +18,9 @@ Example:
 
 * ``Sphinx-Preview`` is a `Sphinx <https://www.sphinx-doc.org>`_ extension.
 * It is maintained by `danwos <https://daniel-woste.de>`_
-* And it may be helpful to get quick previews, e.g. of
-  `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_ objects
-
-  * :need:`REQ_001`.
-  * :need:`SPEC_001`.
+* And it may be helpful to get quick previews, e.g. of `Sphinx-Needs <https://sphinxcontrib-needs.readthedocs.io/en/latest/>`_ objects
+   * :need:`REQ_001`.
+   * :need:`SPEC_001`.
 
 ``Sphinx-Preview`` does not provide any rst directives or roles, as it detects automatically all links via
 JavaScript.
