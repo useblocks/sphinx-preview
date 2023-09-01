@@ -1,14 +1,22 @@
-import jinja2
+"""
+This module is used to display a modal popup as tooltip for hyperlinks.
+Refer the page for read to both the source code and documentation: https://sphinx-preview.readthedocs.io/en/latest/
+"""
+
+
 import json
 import os
 import platform
+import jinja2
 
 from sphinx.util.osutil import copyfile
 
 from sphinx_preview.version import VERSION
 
-
 def setup(app):
+    '''
+    Adding the config value and initiate sphinx_preview when the environment and all doctrees are now up-to-date.
+    '''
     app.add_config_value('preview_config', {}, 'html')
     app.connect("env-updated", install_lib_static_files)
 
@@ -29,29 +37,33 @@ def _save_js_file(app, target):
         "set_icon": config.get('set_icon', True),
         "icon_only": config.get('icon_only', True),
         "icon_click": config.get('icon_click', True),
+        "caching": config.get('caching', True),
         "width": config.get('width', 500),
         "height": config.get('height', 300),
         "offset": config.get('offset', {'left': 20, 'top': 20}),
         "timeout": config.get('timeout', 250)
+
     }
     script_dir = os.path.join(os.path.dirname(__file__), 'assets')
-    templateLoader = jinja2.FileSystemLoader(searchpath=script_dir)
-    templateEnv = jinja2.Environment(loader=templateLoader)
+    template_loader = jinja2.FileSystemLoader(searchpath=script_dir)
+    template_env = jinja2.Environment(loader=template_loader)
     TEMPLATE_FILE = "template_sphinx_preview.js"
     try:
-        template = templateEnv.get_template(TEMPLATE_FILE)
-        outputText = template.render(config=json.dumps(final_config))
+        template = template_env.get_template(TEMPLATE_FILE)
+        output_text = template.render(config=json.dumps(final_config))
     except Exception as e:
         raise e
     os.makedirs(os.path.dirname(target), exist_ok=True)
-    with open(target, 'w+') as conf_file:
-        conf_file.write(outputText)
+    with open(target, 'w+', encoding='utf-8') as conf_file:
+        conf_file.write(output_text)
 
     return final_config
 
 
 def install_lib_static_files(app, env):
-    # Add js / css files to the final project
+    '''
+    Add js / css files to the final project
+    '''
     extra_files = ['assets/sphinx_preview.css']
     register_files = ['assets/sphinx_preview.js', 'assets/sphinx_preview.css']
     this_path = os.path.abspath(os.path.dirname(__file__))

@@ -30,7 +30,7 @@ $( window ).on('load', (function() {
         $(this).remove();
       });
 
-    node.append('<div id="sp_preview"><iframe id="sp_preframe" src=""></iframe></div>')
+    node.append('<div id="sp_preview"><iframe id="sp_preframe" src="" onload=scrollToContent(this)></iframe></div>')
   }
   let over_function = function() {
     // Be sure we start iframe handling only, if it was not done before.
@@ -108,9 +108,9 @@ $( window ).on('load', (function() {
       $("#sp_preview").css({
         width: width,
         height: height,
-        top: pos_top,
+        top: pos_screen_top,
         left: pos_left,
-        position: 'absolute'
+        position: 'fixed'
       });
 
       // show iframe after some time only
@@ -134,19 +134,30 @@ $( window ).on('load', (function() {
     $("#sp_preview").remove();
   };
 
-  let selector = '';
-  if(config.set_icon) {
-    selector = 'span.sp_preview_icon'
-    if(config.icon_click)
-    {
-      $(selector).on('click', over_function);
-    }else{
-      $(selector).mouseover(over_function);
+  if (config.set_icon) {
+    // If icon_click is set to True, then add the event for the eye icons; otherwise, add the event for the selector from the config.
+    if (config.icon_click) {
+        $('span.sp_preview_icon').on('click', over_function);
+    } else {
+        $(config.selector).not(config.not_selector).mouseover(over_function);
     }
+  } else {
+    $(config.selector).not(config.not_selector).mouseover(over_function);
   }
   if (config.icon_only === false) {
-    selector = config.selector;
-    $(selector).mouseover(over_function);
+    $(config.selector).mouseover(over_function);
   }
 
 }));
+
+function scrollToContent(iframe) {
+  //sometimes iframe doesn't automatically scroll to target link position so we need to detect target link's position and scroll there
+  var target = $(iframe).attr('src');
+  // specify a taget link
+  if (target.indexOf("#") != -1) {
+      setTimeout(function () {
+          var pos_top_content_iframe = $("#sp_preframe").contents().find('a[href="#' + target.split("#")[1] + '"]').last().offset().top;
+          document.getElementById("sp_preframe").contentDocument.documentElement.scrollTop = pos_top_content_iframe - 25;
+      }, 500);
+  }
+}

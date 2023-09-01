@@ -1,13 +1,9 @@
-a:after{
-}
-
 #sp_preview {
   width: 300px;
   height: 200px;
-  border: 1px solid black;
-  border-radius: 0;
   display: none;
   z-index: 1000;
+  border-radius: 0.5rem;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
   padding: 0;
   background-color: rgba(0,0,0,0.6);
@@ -19,4 +15,5 @@ a:after{
   opacity: 1;
   overflow: hidden;
   border: none;
+  border-radius: 0.5rem;
 }

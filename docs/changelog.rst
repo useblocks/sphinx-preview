@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.2
+-----
+
+* fixed jump page issue in Chromium browsers
+* Refactor code with pylint
+
+
 0.1.1
 -----
 
