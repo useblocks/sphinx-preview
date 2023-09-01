@@ -29,7 +29,7 @@ author = 'team useblocks'
 # ones.
 extensions = [
     'sphinx_preview',
-    'sphinxcontrib.needs'
+    'sphinx_needs'
 ]
 
 preview_config = {

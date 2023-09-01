@@ -1,2 +1,3 @@
 Sphinx
-sphinxcontrib-needs
+sphinx-needs
+sphinxcontrib-plantuml
