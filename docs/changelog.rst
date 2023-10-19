@@ -1,5 +1,11 @@
 Changelog
 =========
+0.1.3
+-----
+
+* feature mouse over pop-up iframe
+* Bugfixes
+
 
 0.1.2
 -----
