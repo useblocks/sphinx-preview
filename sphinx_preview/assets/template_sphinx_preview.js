@@ -66,9 +66,9 @@ $( window ).on('load', (function() {
       $("#sp_preframe").mouseleave(out_function);
 
       // Some debug info
-      console.log('link: ' + link_target);
-      console.log('left: ' + position.left + 'top: ' + position.top);
-      console.log('width:' + config.width + ' height; ' + config.height);
+      // console.log('link: ' + link_target);
+      // console.log('left: ' + position.left + 'top: ' + position.top);
+      // console.log('width:' + config.width + ' height; ' + config.height);
 
       // set iframe position relative to link
       pos_left = position.left + config.offset.left
@@ -97,14 +97,6 @@ $( window ).on('load', (function() {
       if(pos_screen_top + height > win_height){ pos_top = position.top - height}  // show above link
       if(pos_screen_top < 0) { pos_top = 50; }
 
-      // console.log(
-      //   ' -> pos_left: ' + pos_left + '\n' +
-      //   ' -> pos_top: ' + pos_top + '\n' +
-      //   ' -> width: ' + width + '\n' +
-      //   ' -> height: ' + height + '\n' +
-      //   ' -> win_width: ' + win_width + '\n' +
-      //   ' -> win_height: ' + win_height + '\n')
-
       $("#sp_preview").css({
         width: width,
         height: height,
@@ -130,8 +122,11 @@ $( window ).on('load', (function() {
     sp_active = false;
     // We need to remove the preview div including the iframe, otherwise chromium based browser handle strange
     // and do not reload the iframe correctly. They just go to the top of the page and stay there forever.
-    $("#sp_preview").hide();
-    $("#sp_preview").remove();
+    var isHovered = $('#sp_preview').is(":hover");
+    if(!isHovered){
+      $("#sp_preview").hide();
+      $("#sp_preview").remove();
+    }
   };
 
   if (config.set_icon) {
